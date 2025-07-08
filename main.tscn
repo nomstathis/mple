@@ -1,9 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://cpqqlc7e3p0uu"]
+[gd_scene load_steps=5 format=3 uid="uid://cpqqlc7e3p0uu"]
 
-[ext_resource type="Script" uid="uid://b5pnid3yxyct3" path="res://character_body_2d.gd" id="1_0xm2m"]
+[ext_resource type="Script" path="res://character_body_2d.gd" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://do11206ykg0oo" path="res://icon.svg" id="2_h2yge"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1bvp3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0xm2m"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -16,3 +18,6 @@ shape = SubResource("CircleShape2D_1bvp3")
 [node name="Icon" type="Sprite2D" parent="CharacterBody2D"]
 position = Vector2(95, 48)
 texture = ExtResource("2_h2yge")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_0xm2m")
